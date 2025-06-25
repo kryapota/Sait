@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Трекер задач 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab active" data-tab="tasks">📋 Задачи</button>
+    <button class="tab" data-tab="tags">🏷️ Теги</button>
+  </div>
+
+  <div id="tasksTab" class="tab-content active">
+    <div class="app">
+      <h1>Задачи</h1>
+      <div class="controls">
+        <input type="text" id="titleInput" placeholder="Заголовок">
+        <input type="text" id="descInput" placeholder="Описание">
+        <select id="statusInput">
+          <option value="ожидание">Ожидание</option>
+          <option value="в процессе">В процессе</option>
+          <option value="завершен">Завершено</option>
+        </select>
+        <input type="file" id="imageInput" accept="image/*">
+        <div id="tagCheckboxes" class="tag-checkboxes"></div>
+        <button id="addBtn">Добавить</button>
+      </div>
+      <ul id="taskList" class="grid"></ul>
+    </div>
+  </div>
+
+  <div id="tagsTab" class="tab-content">
+    <div class="tags-panel">
+      <h2>Теги</h2>
+      <input type="text" id="newTag" placeholder="Новый тег...">
+      <button id="addTag">Добавить</button>
+      <ul id="tagList"></ul>
+    </div>
+  </div>
+
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <h2>Редактировать задачу</h2>
+      <input type="text" id="editTitle">
+      <input type="text" id="editDesc">
+      <select id="editStatus">
+        <option value="ожидание">Ожидание</option>
+        <option value="в процессе">В процессе</option>
+        <option value="завершен">Завершено</option>
+      </select>
+      <div id="editTagCheckboxes" class="tag-checkboxes"></div>
+      <button id="saveEdit">Сохранить</button>
+      <button id="cancelEdit">Отмена</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
