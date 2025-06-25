@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #eef1f6, #cdd2df);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #fff;
+  padding: 10px;
+}
+
+.tab {
+  border: none;
+  background: #e5e7eb;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tab.active {
+  background: #6366f1;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+.controls input, .controls select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1 1 200px;
+}
+#addBtn, #addTag {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+.task {
+  background: white;
+  border-radius: 10px;
+  width: calc(25% - 20px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+}
+.task-header {
+  height: 6px;
+}
+.task h3, .task p {
+  margin: 10px;
+}
+.task img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+}
+.task .tags {
+  margin: 10px;
+}
+.tag {
+  display: inline-block;
+  background: #d1d5db;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.tags-panel {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+#tagList {
+  list-style: none;
+  padding: 0;
+}
+#tagList li {
+  background: white;
+  margin: 6px auto;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tag-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
